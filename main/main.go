@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/adammck/dynamixel/network"
+	"github.com/d0pam1n/dynamixel/network"
 	"github.com/d0pam1n/hexapod"
 	"github.com/d0pam1n/hexapod/components/controller"
 	"github.com/d0pam1n/hexapod/components/head"

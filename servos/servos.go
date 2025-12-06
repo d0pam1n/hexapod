@@ -3,9 +3,9 @@ package servos
 import (
 	"fmt"
 
-	"github.com/adammck/dynamixel/network"
-	"github.com/adammck/dynamixel/servo"
-	"github.com/adammck/dynamixel/servo/ax"
+	"github.com/d0pam1n/dynamixel/network"
+	"github.com/d0pam1n/dynamixel/servo"
+	"github.com/d0pam1n/dynamixel/servo/ax"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -76,7 +76,7 @@ func RegMoveTo(s *servo.Servo, angle float64) error {
 
 	// If the servo isn't in buffered mode, enable it for the duration of this
 	// method. This is a stupid hack.
-	if !s.Buffered {
+	if !s.IsBuffered() {
 		s.SetBuffered(true)
 		defer s.SetBuffered(false)
 	}

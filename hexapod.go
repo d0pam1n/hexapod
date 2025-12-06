@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/adammck/dynamixel/iface"
-	"github.com/adammck/dynamixel/network"
-	proto1 "github.com/adammck/dynamixel/protocol/v1"
+	"github.com/d0pam1n/dynamixel/iface"
+	"github.com/d0pam1n/dynamixel/network"
+	proto1 "github.com/d0pam1n/dynamixel/protocol/v1"
 	"github.com/d0pam1n/hexapod/math3d"
 	"github.com/d0pam1n/hexapod/utils"
 	"github.com/sirupsen/logrus"

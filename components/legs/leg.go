@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/adammck/dynamixel/network"
-	"github.com/adammck/dynamixel/servo"
+	"github.com/d0pam1n/dynamixel/network"
+	"github.com/d0pam1n/dynamixel/servo"
 	"github.com/d0pam1n/hexapod/math3d"
 	"github.com/d0pam1n/hexapod/servos"
 	"github.com/d0pam1n/hexapod/utils"

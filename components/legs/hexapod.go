@@ -5,8 +5,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/adammck/dynamixel/network"
-	"github.com/adammck/dynamixel/servo"
+	"github.com/d0pam1n/dynamixel/network"
+	"github.com/d0pam1n/dynamixel/servo"
 	"github.com/d0pam1n/hexapod"
 	"github.com/d0pam1n/hexapod/components/legs/gait"
 	"github.com/d0pam1n/hexapod/math3d"
