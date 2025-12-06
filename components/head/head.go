@@ -5,12 +5,12 @@ import (
 	"math"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/adammck/dynamixel/servo"
-	"github.com/adammck/hexapod"
-	"github.com/adammck/hexapod/math3d"
-	"github.com/adammck/hexapod/servos"
-	"github.com/adammck/hexapod/utils"
+	"github.com/d0pam1n/hexapod"
+	"github.com/d0pam1n/hexapod/math3d"
+	"github.com/d0pam1n/hexapod/servos"
+	"github.com/d0pam1n/hexapod/utils"
+	"github.com/sirupsen/logrus"
 )
 
 var log = logrus.WithFields(logrus.Fields{

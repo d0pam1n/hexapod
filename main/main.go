@@ -3,12 +3,6 @@ package main
 import (
 	"flag"
 
-	log "github.com/Sirupsen/logrus"
-	"github.com/adammck/dynamixel/network"
-	"github.com/adammck/hexapod"
-	"github.com/adammck/hexapod/components/controller"
-	"github.com/adammck/hexapod/components/head"
-	"github.com/adammck/hexapod/components/legs"
 	"io"
 	"io/ioutil"
 	"os"
@@ -16,11 +10,18 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/adammck/hexapod/components/voltage"
-	fake_serial "github.com/adammck/hexapod/fake/serial"
-	fake_voltage "github.com/adammck/hexapod/fake/voltage"
-	"github.com/adammck/hexapod/math3d"
-	"github.com/adammck/hexapod/servos"
+	"github.com/adammck/dynamixel/network"
+	"github.com/d0pam1n/hexapod"
+	"github.com/d0pam1n/hexapod/components/controller"
+	"github.com/d0pam1n/hexapod/components/head"
+	"github.com/d0pam1n/hexapod/components/legs"
+	log "github.com/sirupsen/logrus"
+
+	"github.com/d0pam1n/hexapod/components/voltage"
+	fake_serial "github.com/d0pam1n/hexapod/fake/serial"
+	fake_voltage "github.com/d0pam1n/hexapod/fake/voltage"
+	"github.com/d0pam1n/hexapod/math3d"
+	"github.com/d0pam1n/hexapod/servos"
 	"github.com/jacobsa/go-serial/serial"
 )
 

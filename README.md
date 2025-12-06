@@ -31,7 +31,7 @@ And [here's a video](https://vimeo.com/115932070).
 * [JW Winco 353-20-24-M6-S-55](https://store.solutionsdirectonline.com/jw-winco-353-20-24-m6-s-55-vibration-isolation-mount-p9026.aspx) rubber feet
 * [Microsoft LifeCam Cinema 720p](http://a.co/3BNVShU) camera
 
-STL files are available at [adammck/hexapod-parts](https://github.com/adammck/hexapod-parts), but should not be considered usable for any purpose. It's more fun to design your own, anyway. Email me if you want the SketchUp files.
+STL files are available at [adammck/hexapod-parts](https://github.com/d0pam1n/hexapod-parts), but should not be considered usable for any purpose. It's more fun to design your own, anyway. Email me if you want the SketchUp files.
 
 ## Usage
 
@@ -42,7 +42,7 @@ STL files are available at [adammck/hexapod-parts](https://github.com/adammck/he
 2. Provision the RPi using
    [adammck/headless-raspbian](https://github.com/adammck/headless-raspbian)
    and
-   [adammck/hexapod-infra](https://github.com/adammck/hexapod-infra).
+   [adammck/hexapod-infra](https://github.com/d0pam1n/hexapod-infra).
    It runs Raspbian Jessie with
    [QtSixa](http://qtsixa.sourceforge.net),
    the control program (this repo), and a few systemd services to glue

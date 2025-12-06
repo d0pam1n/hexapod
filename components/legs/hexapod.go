@@ -5,12 +5,12 @@ import (
 	"math"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/adammck/dynamixel/network"
 	"github.com/adammck/dynamixel/servo"
-	"github.com/adammck/hexapod"
-	"github.com/adammck/hexapod/components/legs/gait"
-	"github.com/adammck/hexapod/math3d"
+	"github.com/d0pam1n/hexapod"
+	"github.com/d0pam1n/hexapod/components/legs/gait"
+	"github.com/d0pam1n/hexapod/math3d"
+	"github.com/sirupsen/logrus"
 )
 
 type State string
@@ -207,7 +207,8 @@ func (l *Legs) waitForReady() {
 }
 
 // TODO: Maybe provide State to boot, in case we have an initial pose? We're
-//       using the zero value now, which seems like a shaky assumption.
+//
+//	using the zero value now, which seems like a shaky assumption.
 func (l *Legs) Boot() error {
 
 	// Set all servos slow.

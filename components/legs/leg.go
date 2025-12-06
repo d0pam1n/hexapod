@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/adammck/dynamixel/network"
 	"github.com/adammck/dynamixel/servo"
-	"github.com/adammck/hexapod/math3d"
-	"github.com/adammck/hexapod/servos"
-	"github.com/adammck/hexapod/utils"
+	"github.com/d0pam1n/hexapod/math3d"
+	"github.com/d0pam1n/hexapod/servos"
+	"github.com/d0pam1n/hexapod/utils"
+	"github.com/sirupsen/logrus"
 )
 
 const (

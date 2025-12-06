@@ -2,7 +2,8 @@ package legs
 
 import (
 	"fmt"
-	"github.com/adammck/hexapod/math3d"
+
+	"github.com/d0pam1n/hexapod/math3d"
 )
 
 type Segment struct {

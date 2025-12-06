@@ -4,10 +4,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/adammck/hexapod"
-	"github.com/adammck/hexapod/math3d"
 	"github.com/adammck/sixaxis"
+	"github.com/d0pam1n/hexapod"
+	"github.com/d0pam1n/hexapod/math3d"
+	"github.com/sirupsen/logrus"
 )
 
 const (

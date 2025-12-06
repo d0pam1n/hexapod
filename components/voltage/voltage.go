@@ -1,9 +1,10 @@
 package voltage
 
 import (
-	log "github.com/Sirupsen/logrus"
-	"github.com/adammck/hexapod"
 	"time"
+
+	"github.com/d0pam1n/hexapod"
+	log "github.com/sirupsen/logrus"
 )
 
 var logger = log.WithFields(log.Fields{

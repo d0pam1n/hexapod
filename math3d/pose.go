@@ -2,7 +2,8 @@ package math3d
 
 import (
 	"fmt"
-	"github.com/adammck/hexapod/utils"
+
+	"github.com/d0pam1n/hexapod/utils"
 )
 
 type Pose struct {

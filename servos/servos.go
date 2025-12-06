@@ -3,10 +3,10 @@ package servos
 import (
 	"fmt"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/adammck/dynamixel/network"
 	"github.com/adammck/dynamixel/servo"
 	"github.com/adammck/dynamixel/servo/ax"
+	log "github.com/sirupsen/logrus"
 )
 
 type Pool []*servo.Servo

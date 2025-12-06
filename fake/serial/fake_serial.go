@@ -2,7 +2,8 @@ package serial
 
 import (
 	"bytes"
-	log "github.com/Sirupsen/logrus"
+
+	log "github.com/sirupsen/logrus"
 )
 
 var logger = log.WithFields(log.Fields{
