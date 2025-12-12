@@ -54,22 +54,22 @@ func main() {
 	// Get origins from hexapod legs definitions
 	// Path: components/legs/hexapod.go
 	if *legBaseId == 10 {
-		l = legs.NewLeg(network, legs.OriginFrontLeft.BaseId, legs.OriginFrontLeft.Name, legs.OriginFrontLeft.Vector, legs.OriginFrontLeft.Angle)
+		l = legs.NewLeg(network, 10, "FL", math3d.MakeVector3(-61.167, 24, 98), 300)
 	}
 	if *legBaseId == 20 {
-		l = legs.NewLeg(network, legs.OriginMidLeft.BaseId, legs.OriginMidLeft.Name, legs.OriginMidLeft.Vector, legs.OriginMidLeft.Angle)
+		l = legs.NewLeg(network, 20, "ML", math3d.MakeVector3(-81, 24, 0), 270)
 	}
 	if *legBaseId == 30 {
-		l = legs.NewLeg(network, legs.OriginBackLeft.BaseId, legs.OriginBackLeft.Name, legs.OriginBackLeft.Vector, legs.OriginBackLeft.Angle)
+		l = legs.NewLeg(network, 30, "BL", math3d.MakeVector3(-61.167, 24, -98), 240)
 	}
 	if *legBaseId == 40 {
-		l = legs.NewLeg(network, legs.OriginBackRight.BaseId, legs.OriginBackRight.Name, legs.OriginBackRight.Vector, legs.OriginBackRight.Angle)
+		l = legs.NewLeg(network, 40, "BR", math3d.MakeVector3(61.167, 24, -98), 120)
 	}
 	if *legBaseId == 50 {
-		l = legs.NewLeg(network, legs.OriginMidRight.BaseId, legs.OriginMidRight.Name, legs.OriginMidRight.Vector, legs.OriginMidRight.Angle)
+		l = legs.NewLeg(network, 50, "MR", math3d.MakeVector3(81, 24, 0), 90)
 	}
 	if *legBaseId == 60 {
-		l = legs.NewLeg(network, legs.OriginFrontRight.BaseId, legs.OriginFrontRight.Name, legs.OriginFrontRight.Vector, legs.OriginFrontRight.Angle)
+		l = legs.NewLeg(network, 60, "FR", math3d.MakeVector3(61.167, 24, 98), 60)
 	}
 
 	if l == nil {
@@ -89,7 +89,7 @@ func main() {
 
 // COPIED FROM components/legs/hexapod.go
 // Did not have time to refactor properly.
-var stepRadius = 120.0
+var stepRadius = 240.0
 
 // homeFootPosition returns a vector in the WORLD coordinate space for the home
 // position of the given leg.

@@ -110,20 +110,6 @@ var log = logrus.WithFields(logrus.Fields{
 	"pkg": "legs",
 })
 
-type Origin struct {
-	BaseId int
-	Name   string
-	Vector *math3d.Vector3
-	Angle  float64
-}
-
-var OriginFrontLeft = Origin{10, "FL", math3d.MakeVector3(-61.167, 24, 98), 300}
-var OriginMidLeft = Origin{20, "ML", math3d.MakeVector3(-81, 24, 0), 270}
-var OriginBackLeft = Origin{30, "BL", math3d.MakeVector3(-61.167, 24, -98), 240}
-var OriginBackRight = Origin{40, "BR", math3d.MakeVector3(61.167, 24, -98), 120}
-var OriginMidRight = Origin{50, "MR", math3d.MakeVector3(81, 24, 0), 90}
-var OriginFrontRight = Origin{60, "FR", math3d.MakeVector3(61.167, 24, 98), 60}
-
 func New(n *network.Network) *Legs {
 	l := &Legs{
 		Network: n,
@@ -136,12 +122,12 @@ func New(n *network.Network) *Legs {
 			// Note that the angles are the direction in which the leg is
 			// pointing, NOT the angle between the hex and leg origins.
 			//
-			NewLeg(n, OriginFrontLeft.BaseId, OriginFrontLeft.Name, OriginFrontLeft.Vector, OriginFrontLeft.Angle),     // Front Left  - 0
-			NewLeg(n, OriginMidLeft.BaseId, OriginMidLeft.Name, OriginMidLeft.Vector, OriginMidLeft.Angle),             // Mid Left    - 1
-			NewLeg(n, OriginBackLeft.BaseId, OriginBackLeft.Name, OriginBackLeft.Vector, OriginBackLeft.Angle),         // Back Left   - 2
-			NewLeg(n, OriginBackRight.BaseId, OriginBackRight.Name, OriginBackRight.Vector, OriginBackRight.Angle),     // Back Right  - 3
-			NewLeg(n, OriginMidRight.BaseId, OriginMidRight.Name, OriginMidRight.Vector, OriginMidRight.Angle),         // Mid Right   - 4
-			NewLeg(n, OriginFrontRight.BaseId, OriginFrontRight.Name, OriginFrontRight.Vector, OriginFrontRight.Angle), // Front Right - 5
+			NewLeg(n, 10, "FL", math3d.MakeVector3(-61.167, 24, 98), 300),  // Front Left  - 0
+			NewLeg(n, 20, "ML", math3d.MakeVector3(-81, 24, 0), 270),       // Mid Left    - 1
+			NewLeg(n, 30, "BL", math3d.MakeVector3(-61.167, 24, -98), 240), // Back Left   - 2
+			NewLeg(n, 40, "BR", math3d.MakeVector3(61.167, 24, -98), 120),  // Back Right  - 3
+			NewLeg(n, 50, "MR", math3d.MakeVector3(81, 24, 0), 90),         // Mid Right   - 4
+			NewLeg(n, 60, "FR", math3d.MakeVector3(61.167, 24, 98), 60),    // Front Right - 5
 		},
 	}
 
