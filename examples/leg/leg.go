@@ -77,7 +77,9 @@ func main() {
 		os.Exit(1)
 	}
 
-	homeFootPosition(&math3d.ZeroVector3, l, math3d.Pose{})
+	v := homeFootPosition(&math3d.ZeroVector3, l, math3d.Pose{})
+
+	l.SetGoal(v)
 
 	err = protocol.Action()
 	if err != nil {
