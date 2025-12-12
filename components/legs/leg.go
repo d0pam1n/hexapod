@@ -44,10 +44,10 @@ type Leg struct {
 }
 
 func NewLeg(network *network.Network, baseId int, name string, origin *math3d.Vector3, angle float64) *Leg {
-	coxa := mustGetServo(network, baseId+1)
-	femur := mustGetServo(network, baseId+2)
-	tibia := mustGetServo(network, baseId+3)
-	tarsus := mustGetServo(network, baseId+4)
+	coxa := mustGetServo(network, baseId+4)
+	femur := mustGetServo(network, baseId+3)
+	tibia := mustGetServo(network, baseId+2)
+	tarsus := mustGetServo(network, baseId+1)
 
 	return &Leg{
 		Origin: origin,

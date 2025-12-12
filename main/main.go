@@ -13,20 +13,16 @@ import (
 	"github.com/d0pam1n/dynamixel/network"
 	"github.com/d0pam1n/hexapod"
 	"github.com/d0pam1n/hexapod/components/controller"
-	"github.com/d0pam1n/hexapod/components/head"
 	"github.com/d0pam1n/hexapod/components/legs"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/d0pam1n/hexapod/components/voltage"
 	fake_serial "github.com/d0pam1n/hexapod/fake/serial"
-	fake_voltage "github.com/d0pam1n/hexapod/fake/voltage"
-	"github.com/d0pam1n/hexapod/math3d"
 	"github.com/d0pam1n/hexapod/servos"
 	"github.com/jacobsa/go-serial/serial"
 )
 
 var (
-	serialPort     = flag.String("serial-port", "/dev/ttyACM0", "path to the serial port")
+	serialPort     = flag.String("serial-port", "/dev/ttyUSB0", "path to the serial port")
 	controllerPort = flag.String("controller-port", "/dev/input/event1", "path to the sixaxis controller")
 	debug          = flag.Bool("debug", false, "enable verbose logging")
 	httpPort       = flag.Int("http-port", 8000, "port to start HTTP server on")
@@ -115,27 +111,27 @@ func main() {
 	}
 	h.Add(controller.New(f))
 
-	var v voltage.HasVoltage
-	if *offline {
-		log.Warn("using fake voltage check")
-		v = fake_voltage.New(9.6)
-	} else {
-		v = l.Legs[0].Coxa
-	}
-	h.Add(voltage.New(v))
+	/*var v voltage.HasVoltage
+		if *offline {
+			log.Warn("using fake voltage check")
+			v = fake_voltage.New(9.6)
+		} else {
+			v = l.Legs[0].Coxa
+		}
+		h.Add(voltage.New(v))
 
 	headH, err := servos.New(network, 71)
-	if err != nil {
-		log.Fatalf("error while initializing servo #71: %s", err)
-	}
-	headV, err := servos.New(network, 72)
-	if err != nil {
-		log.Fatalf("error while initializing servo #72: %s", err)
-	}
-	h.Add(head.New(
-		math3d.Pose{math3d.Vector3{X: 0, Y: 43.0, Z: 70}, 0, 0, 0},
-		headH,
-		headV))
+		if err != nil {
+			log.Fatalf("error while initializing servo #71: %s", err)
+		}
+		headV, err := servos.New(network, 72)
+		if err != nil {
+			log.Fatalf("error while initializing servo #72: %s", err)
+		}
+		h.Add(head.New(
+			math3d.Pose{math3d.Vector3{X: 0, Y: 43.0, Z: 70}, 0, 0, 0},
+			headH,
+			headV))*/
 
 	log.Info("booting components")
 	err = h.Boot()

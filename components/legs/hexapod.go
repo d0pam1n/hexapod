@@ -122,12 +122,13 @@ func New(n *network.Network) *Legs {
 			// Note that the angles are the direction in which the leg is
 			// pointing, NOT the angle between the hex and leg origins.
 			//
-			NewLeg(n, 40, "FL", math3d.MakeVector3(-61.167, 24, 98), 300),  // Front Left  - 0
-			NewLeg(n, 50, "FR", math3d.MakeVector3(61.167, 24, 98), 60),    // Front Right - 1
-			NewLeg(n, 60, "MR", math3d.MakeVector3(81, 24, 0), 90),         // Mid Right   - 2
-			NewLeg(n, 10, "BR", math3d.MakeVector3(61.167, 24, -98), 120),  // Back Right  - 3
-			NewLeg(n, 20, "BL", math3d.MakeVector3(-61.167, 24, -98), 240), // Back Left   - 4
-			NewLeg(n, 30, "ML", math3d.MakeVector3(-81, 24, 0), 270),       // Mid Left    - 5
+
+			NewLeg(n, 60, "FR", math3d.MakeVector3(61.167, 24, 98), 60),    // Front Right - 5
+			NewLeg(n, 50, "MR", math3d.MakeVector3(81, 24, 0), 90),         // Mid Right   - 4
+			NewLeg(n, 40, "BR", math3d.MakeVector3(61.167, 24, -98), 120),  // Back Right  - 3
+			NewLeg(n, 30, "BL", math3d.MakeVector3(-61.167, 24, -98), 240), // Back Left   - 2
+			NewLeg(n, 20, "ML", math3d.MakeVector3(-81, 24, 0), 270),       // Mid Left    - 1
+			NewLeg(n, 10, "FL", math3d.MakeVector3(-61.167, 24, 98), 300),  // Front Left  - 0
 		},
 	}
 
