@@ -9,6 +9,8 @@ import (
 	"time"
 
 	"github.com/d0pam1n/dynamixel/network"
+	v1 "github.com/d0pam1n/dynamixel/protocol/v1"
+
 	"github.com/d0pam1n/hexapod/components/legs"
 	"github.com/d0pam1n/hexapod/math3d"
 	"github.com/jacobsa/go-serial/serial"
@@ -45,6 +47,8 @@ func main() {
 
 	network.Timeout = 1 * time.Second
 
+	protocol := v1.New(network)
+
 	var l *legs.Leg
 
 	// Get origins from hexapod legs definitions
@@ -70,6 +74,14 @@ func main() {
 
 	if l == nil {
 		fmt.Printf("unknown leg base ID: %d\n", *legBaseId)
+		os.Exit(1)
+	}
+
+	homeFootPosition(&math3d.ZeroVector3, l, math3d.Pose{})
+
+	err = protocol.Action()
+	if err != nil {
+		fmt.Printf("protocol.Action error: %s\n", err)
 		os.Exit(1)
 	}
 
